@@ -1,0 +1,474 @@
+ @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+ :root{
+      --font-family:'Secular One', sans-serif;
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------------------------------- Header -----------------------*/
+header{
+    display: flex;
+    width: 100%;
+    height: 35px;
+    margin: 35px 0;
+    align-items: center;
+
+}
+.center-logo{
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 65px;
+  
+}
+
+.menuBar1 ul li {                         /*--------左側のリスト群 -----------*/
+    display: inline-block;
+    width: 120px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    justify-content: space-around;
+}
+.menuBar1 li{
+    margin: 5px;
+    width: 100px;
+}
+.menuBar1 ul li a:hover{
+    color: cadetblue;
+}
+.menuBar1 ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;   
+    transition: all 0.5s;
+}                                  /*下層パーツ*/
+.subMenu1 {
+    position: absolute;
+    margin-top: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    display: none;           /*見えないように*/
+    z-index: 100;
+    background-color: white;   
+}
+.subMenu1 .sub li a {
+    color: rgb(141, 141, 141);
+}
+.subMenu1 .sub{
+    width: 450px;
+    white-space: nowrap;         /**/
+}
+.menuBar1 ul li:hover .subMenu1{
+    display: block;                    /*display: none;にしたのは.subMenu1なのでここをブロック要素に変える必要がある*/
+}
+.menuBar1 ul li:hover .subMenu1 .sub li{   /*menuBarのliをHoverしたときサブメニューのリストが表示される*/
+    display: block;                    /*liタグに対してブロック要素になっている*/        
+    width: 140px;
+}
+.subMenu1 .sub li{
+    display: block;
+}
+
+.cut2 {
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+.cut2 li{
+    margin-left: 10px;
+    padding-left: 100px;
+}
+.cut2 li a{
+    text-decoration: none;
+    color: black;
+}
+
+/*---------------h2 title--------------*/
+.title-zone{
+    width: 100%;
+    height: 40px;
+}
+.title{
+    font-size: 35px;
+    color: rgb(58, 105, 166);
+    text-align: center;
+    font-family:var(--font-family)
+}
+
+/*---------------slider zone-------------*/
+.hero{
+    overflow: hidden;
+}
+
+.hero img{
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+}
+
+/*----------------- news&event zone------------*/
+article{
+    padding-bottom: 50px;
+}
+.News-header{
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+}
+.News-title{
+    font-size: 35px;
+    color: rgb(58, 105, 166);
+    text-align: center;
+    font-family:var(--font-family)
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding-left: 80px; 
+}
+.card1{
+    width: 350px;
+
+}
+.card1 img{
+    width: 350px;
+    transition: all 0.5s ease;
+
+}
+.card1 img:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+/*----------------- Popular articles zone ------------*/
+.min-slider{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+.slider-card{
+    width: 100%;
+    padding: 30px;
+}
+.slider-card img{
+    width: 250px;
+    margin: auto;
+}
+/*----------------- Favourites zone ------------*/
+.Favourites-zone{
+    width: 100%;
+    height: 95vh;
+    background-color: rgb(255, 228, 92);
+    
+}
+.Favourites{
+    font-size: 35px;
+    color: orange;
+    text-align: center;
+    padding: 40px;
+    font-family:var(--font-family)
+
+}
+.favorite{
+    width: 90%;
+    height: 60vh;
+    background-color: orange;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 30px;
+}
+.card2{
+    width: 220px;
+    height: 220px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: block;
+}
+.card2 img{
+    width: 185px;
+    margin:16px;
+    transition: all 0.5s ease;
+}
+.card2 img:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+.favorite-write{
+    margin-top: 15px;
+}
+.favorite-write a{
+    text-decoration: none;
+    color: brown;
+}
+.en{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+.button{
+    width: 100%;
+    height: 30px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    
+}
+.btn a{
+    width: 300px;
+    margin:20px;
+}
+.btn{
+    background-color: rgb(255, 132, 0);
+    color: rgb(255, 228, 92);
+    border: none;
+    font-size: 1.3rem;
+    font-family: var(--font-family);
+    text-decoration: none;
+    width: 300px;
+    margin: 0 auto;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.btn:hover{
+    color: rgb(255, 132, 0);
+    background-color: rgb(255, 228, 92);
+}
+.btn a .shop{
+    font-family: var(--font-family);
+}
+
+/*----------------- Get to know the characters zone ------------*/
+.characters-zone{
+    position: relative;
+    width: 100%;
+    height: 380px;
+    display: flex;
+}
+.characters-zone1{
+    width: 50%;
+    height: 382px;
+    background-color: rgb(24, 173, 203);
+    padding: 50px 20px 50px 50px;
+}
+.characters-zone2{
+    width: 50%;
+    height: 382px;
+    background-color: rgb(106, 201, 209);
+    padding: 50px 20px 50px 50px;
+}
+.characters-h2{
+    font-family:var(--font-family);
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.characters-p{
+    margin-top: 10px;
+    font-family:var(--font-family);
+    color: white;
+}
+.imgzone1 img{
+    position: absolute;
+    display: flex;
+    width: 250px;
+    top:50px;
+    left: 360px;
+}
+.imgzone2 img{
+    position: absolute;
+    display: flex;
+    width: 250px;
+    top:50px;
+    right: 50px;
+}
+
+.button2{
+    width: 100%;
+    height: 30px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+.button3{
+    width: 100%;
+    height: 30px;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+.btn2 a,
+.btn3 a{
+    width: 300px;
+    margin:20px;
+}
+.btn2,
+.btn3{
+    background-color: rgb(255, 218, 69);
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 1.3rem;
+    font-family: var(--font-family);
+    text-decoration: none;
+    width: 200px;
+    margin:3px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.btn2:hover,
+.btn3:hover{
+    color: yellow;
+    background-color: rgb(0, 143, 81);
+}
+
+/*----------------- About the Moomins zone ------------*/
+.About
+{
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(115, 210, 178);
+}
+.About-text{
+    color: white;
+    font-family: var(--font-family);
+    text-align: center;
+    font-size: 30px;
+    padding-top: 40px;
+    text-transform: uppercase;
+}
+.button4{
+    width: 100%;
+    height: 30px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.btn4 a{
+    width: 300px;
+    margin:20px;
+}
+.btn4{
+    background-color: rgb(255, 218, 69);
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 1.3rem;
+    font-family: var(--font-family);
+    text-decoration: none;
+    width: 300px;
+    margin: 0 auto;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.btn4:hover{
+    color: yellow;
+    background-color: rgb(0, 143, 81);
+}
+    /*----------------- underslider zone ------------*/
+.under-slider{
+    width: 100%;
+    height: 20vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider-card2{
+    position: absolute;
+    left: 150px;
+    width: 80%;
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+.slider-card2 img{
+    width: 200px;
+    height: 80px;
+    margin: auto;
+}
+.slick-next {
+    right: 1px;
+  }
+  .slick-prev {
+    left: 1px;
+  }
+
+  /*----------------- footer zone ------------*/
+.footer-zone{
+    width: 100%;
+    height: 380px;
+    background-color: rgb(27, 63, 111);
+}
+.footer-minzone{
+    width: 100%;
+    height: 300px;
+    margin: 0 50px;
+    display: flex;
+}
+.footer-minzone img{
+    margin-top: 50px;
+    width: 155px;
+    height: 155px;
+}
+
+.row1,.row2,.row3,.row4,.row5,.row6{
+    width: 230px;
+    height: 176px;
+    margin-top: 50px;
+    padding-left: 30px;
+    display: block;
+    list-style: none;
+    line-height: 22px;
+
+}
+
+.row1 h3,.row2 h3,.row3 h3,.row4 h3,.row5 h3,.row6 h3{
+    color: aqua;
+    font-family: var(--font-family);
+    font-size: 5px;
+}
+.row1 p,.row2 p,.row3 p,.row4 p,.row5 p,.row6 p{
+    color: white;
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+}
+.row1 a,.row2 a,.row3 a,.row4 a,.row5 a,.row6 a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.row6{
+    margin-right: 35px;
+
+}
+.fa-brands{
+    width: 25px;
+    height: 25px;
+    color: rgb(27, 63, 111);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sns i{
+    background-color: white;
+    border-radius: 50%;
+    padding: 3.6px;
+    font-size: 16px;
+}
+.sns a i:hover{
+    background-color: rgb(59, 103, 237);
+    color: white;
+}
+.copy-right{
+    color: aqua;
+    font-family: var(--font-family);
+    font-size: 5px;
+    width: 100%;
+    text-align: center;
+}
