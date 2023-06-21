@@ -283,8 +283,14 @@
     <script type="text/javascript" src="slick.min.js"></script>
     <script>
         $(document).ready(function(){
-        $('.your-class').slick({});
-              });
+        $('.your-class').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows:true,
+          dots: true,
+        });
 
         $('.slider-card').slick({
           slidesToShow: 5,
@@ -292,7 +298,7 @@
           autoplay: true,
           autoplaySpeed: 2000,
           arrows:false,
-        	dots: false,
+          dots: false,
         });
 
         $('.slider-card2').slick({
@@ -301,7 +307,7 @@
           autoplay: true,
           autoplaySpeed: 2000,
           arrows:true,
-        	dots: false,
+          dots: false,
         });
     </script>
 </body>
